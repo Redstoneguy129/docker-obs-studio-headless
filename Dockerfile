@@ -3,10 +3,8 @@ LABEL maintainer "Redstoneguy129"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update \
-    && apt-get install -y software-properties-common curl \
+RUN apt-get install -y software-properties-common curl \
     && add-apt-repository "ppa:obsproject/obs-studio" \
-    && apt-get update \
     && apt-get install -y --no-install-recommends \
         ffmpeg \
         obs-studio \
